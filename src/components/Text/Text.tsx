@@ -2,14 +2,14 @@ import style from "./Text.module.css";
 
 interface TextProps {
   children: React.ReactNode;
-  textAlign?: string;
-  marginBottom?: string;
+  textAlign?: "end" | "center" | "justify";
+  marginBottom?: "margin-bottom10" | "margin-bottom20" | "margin-bottom0";
 }
 
 export default function Text({
   children,
-  textAlign = "",
-  marginBottom = "0",
+  textAlign = "center",
+  marginBottom = 'margin-bottom0'
 }: TextProps) {
   return (
     <p

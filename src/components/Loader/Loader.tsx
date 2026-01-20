@@ -1,5 +1,9 @@
-import style from "./Loader.module.css";
-
+import styles from "./Loader.module.css";
+import { Radio } from "react-loader-spinner";
 export default function Loader() {
-  return <div className={style.backdrop}>{/* spinner */}</div>;
+  return (
+    <div className={styles.backdrop}>
+      <Radio />
+    </div>
+  );
 }
