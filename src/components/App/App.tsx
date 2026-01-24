@@ -31,6 +31,7 @@ export default function App() {
         );
         if (photos.length === 0) {
           toast.error("No photos found for your request");
+          setIsVisible(false);
           return;
         }
         setImages((prev) => [...prev, ...photos]);
@@ -58,9 +59,7 @@ export default function App() {
 
   const handleSelectPhoto = (photo: Photo | null) => {
     setSelectedPhoto(photo);
-    console.log(photo);
   };
-  console.log(isVisible);
 
   return (
     <>
@@ -92,7 +91,7 @@ export default function App() {
           )}
         </Container>
       </Section>
-      <Toaster />
+      <Toaster position="top-right" />
     </>
   );
 }
