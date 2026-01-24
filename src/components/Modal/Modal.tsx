@@ -7,7 +7,6 @@ export default function Modal() {
         <button className={styles.closeButton} aria-label="Close modal">
           &times;
         </button>
-        <img src={} alt={} className={styles.image} />
       </div>
     </div>
   );

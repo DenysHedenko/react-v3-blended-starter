@@ -1,11 +1,5 @@
-import type { ReactNode } from "react";
 import style from "./GridItem.module.css";
 
-interface GridItemProps {
-  children: ReactNode;
-}
-
-
-export default function GridItem({ children }:GridItemProps) {
+export default function GridItem({ children }) {
   return <li className={style.item}>{children}</li>;
 }

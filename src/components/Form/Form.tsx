@@ -1,17 +1,17 @@
 import { FiSearch } from "react-icons/fi";
-import style from "./Form.module.css";
+import styles from "./Form.module.css";
 
 export default function Form() {
   return (
-    <form className={style.form}>
+    <form className={styles.form}>
       <input
-        className={style.input}
+        className={styles.input}
         placeholder="What do you want to write?"
         name="search"
         autoFocus
       />
 
-      <button className={style.button} type="submit">
+      <button className={styles.button} type="submit">
         <FiSearch size="16px" />
       </button>
     </form>
