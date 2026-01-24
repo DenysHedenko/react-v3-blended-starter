@@ -1,25 +1,15 @@
-import type { Photo } from "../../types/photo";
-
 import styles from "./PhotosGalleryItem.module.css";
 
-interface PhotosGalleryItemProps {
-  photo: Photo;
-  onClick: () => void;
-}
-
-export default function PhotosGalleryItem({photo, onClick}: PhotosGalleryItemProps) {
+export default function PhotosGalleryItem() {
   return (
     <div
-        onClick={onClick}
-        key={photo.id}
-        className={styles.thumb}
-        style={{
-          backgroundColor: photo.avg_color,
-          borderColor: photo.avg_color,
+      className={styles.thumb}
+      style={{
+        backgroundColor: avg_color,
+        borderColor: avg_color,
       }}
-      
-      >
-        <img src={photo.src.large} alt={photo.alt} />
-      </div>
+    >
+      <img src={} alt={} />
+    </div>
   );
 }

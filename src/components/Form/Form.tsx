@@ -1,23 +1,9 @@
 import { FiSearch } from "react-icons/fi";
 import style from "./Form.module.css";
-import toast from "react-hot-toast";
 
-interface FormProps {
-  onSubmit: (query: string) => Promise<void>;
-}
-
-export default function Form({ onSubmit }: FormProps) {
-  const handleSubmit = async (formData: FormData) => {
-    const query = formData.get("search") as string;
-    if (!query.trim()) {
-      toast.error("Please enter your search query.");
-      return;
-    }
-    await onSubmit(query);
-  };
-
+export default function Form() {
   return (
-    <form className={style.form} action={handleSubmit}>
+    <form className={style.form}>
       <input
         className={style.input}
         placeholder="What do you want to write?"

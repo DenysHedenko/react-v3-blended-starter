@@ -1,12 +1,5 @@
-import type { ReactNode } from "react";
 import style from "./Section.module.css";
 
-interface SectionProps {
-  children: ReactNode;
-}
-
-
-
-export default function Section({ children }:SectionProps) {
+export default function Section({ children }) {
   return <section className={style.section}>{children}</section>;
 }

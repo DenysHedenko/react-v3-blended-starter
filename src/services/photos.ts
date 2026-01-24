@@ -8,8 +8,10 @@ axios.defaults.params = {
   orientation: "landscape",
 };
 
-export const getPhotos = async (query:string) => {
-  const {data} = await axios.get(`search?query=${query}`);
+export const getPhotos = async (query: string, page: number = 1, per_page: number = 15) => {
 
-  return data.photos;
+  const { data }  = await axios.get("search", {
+      params: { query, page, per_page },
+    });
+  return data;
 };
