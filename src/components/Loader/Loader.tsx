@@ -1,5 +1,10 @@
+import { RotatingLines } from "react-loader-spinner";
 import styles from "./Loader.module.css";
 
 export default function Loader() {
-  return <div className={styles.backdrop}>spinner</div>;
+  return (
+    <div className={styles.backdrop}>
+      <RotatingLines />
+    </div>
+  );
 }

@@ -1,13 +1,18 @@
+import type { Photo } from "../../types/photo";
 import Grid from "../Grid/Grid";
 import GridItem from "../GridItem/GridItem";
 import PhotosGalleryItem from "../PhotosGalleryItem/PhotosGalleryItem";
 
-export default function PhotosGallery() {
+interface PhotosGalleryProps {
+  photos: Photo[];
+}
+
+export default function PhotosGallery({ photos }: PhotosGalleryProps) {
   return (
     <Grid>
-      {array.map(() => (
-        <GridItem>
-          <PhotosGalleryItem />
+      {photos.map((photo) => (
+        <GridItem key={photo.id}>
+          <PhotosGalleryItem photo={photo} />
         </GridItem>
       ))}
     </Grid>
