@@ -10,9 +10,16 @@ axios.defaults.params = {
 
 interface GetPhotosResponse {
   photos: Photo[];
+  total_results: number;
+  per_page: number;
 }
 
-export const getPhotos = async (query: string): Promise<Photo[]> => {
-  const response = await axios.get<GetPhotosResponse>(`search?query=${query}`);
-  return response.data.photos;
+export const getPhotos = async (
+  query: string,
+  page: number,
+): Promise<GetPhotosResponse> => {
+  const { data } = await axios.get<GetPhotosResponse>(
+    `search?query=${query}&page=${page}`,
+  );
+  return data;
 };
