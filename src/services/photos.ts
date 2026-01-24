@@ -6,14 +6,3 @@ axios.defaults.headers.common["Authorization"] = API_KEY;
 axios.defaults.params = {
   orientation: "landscape",
 };
-
-export const getPhotos = async (query: string) => {
-  const { data } = await axios.get(`search`, {
-    params: {
-      page: 1,
-      per_page: 15,
-      query: query,
-    },
-  });
-  return data.photos;
-};
